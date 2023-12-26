@@ -1,80 +1,50 @@
 @font-face {
-    font-family: 'iranSans';
-    src: url('media/Iranian\ Sans.ttf');
+    font-family: "iranSans";
+    src: url("media/Iranian\ Sans.ttf");
 }
 
-/* The Meyer Reset */
+/* The Meyer Reset (Deletted) */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-    v2.0 | 20110126
-    License: none (public domain)
-*/
+:root {
+    --accent-color: rgb(21, 21, 21);
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+* {
+    box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    font-family: "iranSans", Arial, Helvetica, sans-serif;
 }
 
-/* My Code */
-
 body {
-    background-color: gray;
+    background-color: var(--accent-color);
+    margin: 0;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 110px;
-    font-family: 'iranSans', Arial, Helvetica, sans-serif;
-    
-    background-color: rgba(0, 0, 0, 1   );
+    padding: 0 100px;
+    font-family: "iranSans", Arial, Helvetica, sans-serif;
+
+    background-color: rgba(0, 0, 0, 1);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
 }
 
 .filimo_logo {
-    width: 95px;
+    width: 113px;
     padding-left: 32px;
     border-left: 1px solid rgb(80, 80, 80);
     margin-left: 38px;
@@ -83,22 +53,64 @@ nav {
 .nav_links {
     display: flex;
     align-items: center;
-    height: 58px;
+    height: 52px;
 }
 
-.nav_links a {
-    padding-left: 60px;
-    font-size: small;
+.nav_links > div {
+    transform: translateY(-3px);
+    margin-left: 35px;
+    font-size: 0.7rem;
 }
 
-a {
-    color: rgb(255, 255, 255);
+.filimotor_container, .filimomadrese_container, .search_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filimotor_container p, .filimomadrese_container p, .search_container p {
     transition: color 0.5s;
-    text-decoration: none;
+    transition: fill 0.5s;
 }
 
-.nav_links a:hover {
+.filimotor_container img {
+    transform: translateY(3px);
+    margin-left: 3px;
+    width: 13px;
+}
+
+.filimotor_container:hover a {
     color: rgb(253, 193, 59);
+}
+
+.filimomadrese_container img {
+    transform: translateY(4px);
+    margin-left: 5px;
+    width: 17px;
+}
+
+.filimomadrese_container:hover a {
+    color: rgb(253, 193, 59);
+}
+
+.search_container img {
+    transform: translateY(4px);
+    margin-left: 3px;
+    width: 15px;
+    fill: rgb(253, 193, 59);
+}
+
+.search_container:hover p {
+    color: rgb(253, 193, 59);
+}
+
+#search_icon {
+    width: 15px;
+    height: 15px;
+    fill: rgb(253, 193, 59);
 }
 
 .nav_signup {
@@ -106,42 +118,66 @@ a {
     justify-content: center;
     align-items: center;
 }
-.nav_signup a {
+
+.login {
+    background-color: rgb(53, 53, 53);
+    margin-right: 15px;
+
     height: 100%;
-    padding: 14px 17px;
-    font-size: small;
+    padding: 13px 15px;
+    font-size: 0.7rem;
     font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.5s;
 }
 
-.login {
-    background-color: rgb(66, 66, 66);
-    margin-right: 13px;
-}
 .login:hover {
     background-color: rgb(80, 80, 80);
 }
 
 .purchase {
     background-color: rgb(28, 181, 97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    padding: 10px 16px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.5s;
 }
-.purchase img {
-    width: 15px;
-    direction: rtl;
-}
+
 .purchase:hover {
     background-color: rgb(24, 153, 82);
 }
 
-.intro_container {
-    background-image: url('media/homepage_intro_photos/intro_photo_1.jpg');
+.purchase img {
+    margin-left: 5px;
+    width: 19px;
+}
+
+.intro_photo img {
+    /* background-image: url("media/homepage_intro_photos/intro_photo_1.jpeg"); */
+    position: absolute;
     background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40vw;
     min-width: 912px;
     width: 100%;
+    z-index: -1;
+}
+
+.intro_gradient {
+    background: radial-gradient(
+        130% 44% at 41% 40%,
+        rgba(0, 0, 0, 0.35) 0,
+        var(--accent-color) 100%
+    );
+    height: 36vw;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
 }
 
 .intro_details {
@@ -149,14 +185,67 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'iranSans', Arial, Helvetica, sans-serif;
+    font-family: "iranSans", Arial, Helvetica, sans-serif;
+    transform: translateY(-62px);
 }
 
-.intro_details p:first-child { color: rgb(253, 193, 59); }
-.intro_details > p:nth-child(2) { color: rgb(255, 255, 255); }
-.intro_items_last_item { color: rgb(129, 129, 129); }
+.intro_details p:first-child {
+    color: rgb(253, 193, 59);
+    margin-bottom: 20px;
+}
 
-.intro_gradient {
-    background: radial-gradient(130% 44% at 41% 40%,rgba(0,0,0,0) 0,#151515 100%);
+.intro_details > p:nth-child(2) {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 43px;
+}
+
+.intro_items {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 45px;
+    margin-bottom: 67px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.intro_items img {
+    width: 20px;
+}
+
+.intro_details a {
+    background-color: rgb(28, 181, 97);
+    padding: 20px 64px;
+    border-radius: 9px;
+}
+
+.intro_items_last_item {
+    color: rgb(175, 175, 175);
+    font-size: 0.65rem;
+    margin-top: 12px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+
+    padding: 0 8px;
+    width: 100%;
+    height: 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(25, 25, 25);
+}
+
+footer > div > a {
+    color: rgb(153, 153, 153);
+    font-size: 0.8rem;
+}
+
+.footer_socials {
     height: 100%;
 }
