@@ -6,3 +6,7 @@
 *.jpeg
 media/fonts/Iranian Sans.eot
 media/fonts/Iranian Sans.woff
+*.woff2
+*.otf
+*.woff
+*.eot
