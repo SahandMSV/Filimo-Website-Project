@@ -1,102 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>تماشای آنلاین فیلم و سریال | فیلیمو</title>
+        <link rel="stylesheet" href="homepage_style.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="media/icons/filimo_icon_smaller.png"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>تماشای آنلاین فیلم و سریال | فیلیمو</title>
-    <link rel="stylesheet" href="homepage_style.css" />
-    <link rel="icon" type="image/png" href="media/icons/filimo_icon_smaller.png" />
-</head>
-
-<body>
-    <nav>
-        <div class="nav_signup">
-            <a href="#" class="login">ورود</a>
-            <div class="subscibe">
-                <a href="#" class="purchase">
-                    خرید اشتراک
-                    <img src="media/icons/subscription_icon.png" alt="" />
-                </a>
-            </div>
-        </div>
-        <div class="nav_links">
-            <a href="#" class="search_container">
-                <p>جستجو</p>
-                <svg width="20px" height="20px">
-                    <image id="search_icon" 
-                    xlink:href="search_icon.svg" 
-                    src="media/icons/search_icon.svg">
-                    </image>
-                </svg>
-            </a>
-            <div class="filimomadrese_container">
-                <a href="#">فیلیمومدرسه</a>
-                <svg width="20px" height="20px">
-                    <image id="filimomadrese_icon" 
-                    xlink:href="filimomadrese_icon.svg" 
-                    src="media/icons/filimomadrese_icon.svg">
-                    </image>
-                </svg>
-                <!-- <img src="media/icons/filimomadrese_icon.svg" alt="" /> -->
-            </div>
-            <div class="filimotor_container">
-                <a href="#">فیلیموتور</a>
-                
-                <!-- <img src="media/icons/filimotor_icon.svg" alt="" /> -->
-            </div>
-            <img src="media/icons/filimo_logo.png" alt="filimo_logo" class="filimo_logo" />
-        </div>
-    </nav>
-    
-    <div class="intro_photo">
-        <img src="media/homepage_intro_photos/intro_photo_08.jpeg" alt="">
-        <div class="intro_gradient">
-            <div class="intro_details">
-                <p>با فیلیمو بی‌وقفه فیلم ببین</p>
-                
-                <p>کنترل همیشه دست توست!</p>
-                
-                <div class="intro_items">
-                    <div class="intro_items_container">
-                        <img src="media/icons/tick_icon.svg" alt="">
-                        <div>می‌تونی یک عضو، مخصوص تماشای کودک بسازی</div>
-                    </div>
-                    <div class="intro_items_container">
-                        <img src="media/icons/tick_icon.svg" alt="">
-                        <div dir="rtl">می‌تونی دانلود کنی بعد بدون اینترنت تماشا کنی</div>
-                    </div>
-                    <div class="intro_items_container">
-                        <img src="media/icons/tick_icon.svg" alt="">
-                        <div>۹۰ هزار اپیزود فیلم و سریال برای تماشا داری</div>
+    <body>
+        <nav id="navbar">
+            <div class="nav_container">
+                <div class="nav_signup">
+                    <a href="#" class="login">ورود</a>
+                    <div class="subscibe">
+                        <a href="#" class="purchase">
+                            خرید اشتراک
+                            <img
+                                src="media/icons/subscription_icon.png"
+                                alt=""
+                            />
+                        </a>
                     </div>
                 </div>
-                
-                <a href="#">
-                    خرید اشتراک و تماشا
-                </a>
-                <div class="intro_items_last_item">
-                    تخفیف ویژه برای کاربران جدید
-                    <!-- <svg>
-                        <use></use>
+                <div class="nav_links">
+                    <a href="#" class="search_container">
+                        <p>جستجو</p>
+                        <!-- <svg>
+                            <use href="#Layer_2"></use>
+                        </svg> -->
+                        <!-- <svg
+                            id="Layer_2"
+                            data-name="Layer 2"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 600 600"
+                            >
+                            
+                            <path
+                            class="cls-1"
+                            fill="white"
+                            d="M346.57,0C206.82,0,93.12,113.69,93.12,253.44c0,
+                            58.77,20.1,112.92,53.79,155.94L9.05,547.24c-12.07,
+                            12.07-12.07,31.64,0,43.72,6.03,6.03,13.96,9.04,21.87,
+                            9.04s15.82-3.01,21.85-9.04l137.86-137.87c43.04,33.71,
+                            97.19,53.81,155.94,53.81,139.75,0,253.44-113.71,
+                            253.44-253.45S486.32,0,346.57,0Zm0,445.07c-105.68,
+                            0-191.63-85.97-191.63-191.63S240.89,61.81,346.57,
+                            61.81s191.63,85.97,191.63,191.63-85.97,191.63-191.63,
+                            191.63Z"
+                            />
+                        </svg> -->
+                    </a>
+                    <div class="filimomadrese_container">
+                        <a href="#">فیلیمومدرسه</a>
+                        <!-- <svg width="20px" height="20px">
+                        <image
+                        id="search_icon"
+                        xlink:href="search_icon.svg"
+                        src="media/icons/search_icon.svg"
+                        ></image>
                     </svg> -->
-                    <img src="media/icons/giftcard_icon.svg" alt="">
+                        <!-- <img src="media/icons/filimomadrese_icon.svg" alt="" /> -->
+                    </div>
+                    <div class="filimotor_container">
+                        <a href="#">فیلیموتور</a>
+
+                        <!-- <img src="media/icons/filimotor_icon.svg" alt="" /> -->
+                    </div>
+                    <img
+                        src="media/icons/filimo_logo.png"
+                        alt="filimo_logo"
+                        class="filimo_logo"
+                    />
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <footer>
-        <div class="footer_socials">
-            <a href="#">
-                شبکه‌های اجتماعی
-            </a>
+        </nav>
+        
+        <div class="intro_photo">
+            <img src="media/homepage_intro_photos/intro_photo_09.jpeg" alt="" />
+            <div class="intro_gradient">
+                <div class="intro_details">
+                    <p>با فیلیمو بی‌وقفه فیلم ببین</p>
+
+                    <p>کنترل همیشه دست توست!</p>
+
+                    <div class="intro_items">
+                        <div class="intro_items_container">
+                            <img src="media/icons/tick_icon.svg" alt="" />
+                            <div>می‌تونی یک عضو، مخصوص تماشای کودک بسازی</div>
+                        </div>
+                        <div class="intro_items_container">
+                            <img src="media/icons/tick_icon.svg" alt="" />
+                            <div dir="rtl">
+                                می‌تونی دانلود کنی بعد بدون اینترنت تماشا کنی
+                            </div>
+                        </div>
+                        <div class="intro_items_container">
+                            <img src="media/icons/tick_icon.svg" alt="" />
+                            <div>
+                                ۹۰ هزار اپیزود فیلم و سریال برای تماشا داری
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#"> خرید اشتراک و تماشا </a>
+                    <div class="intro_items_last_item">
+                        تخفیف ویژه برای کاربران جدید
+                        <!-- <svg>
+                        <use></use>
+                        </svg> -->
+                        <img src="media/icons/giftcard_icon.svg" alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <div class="footer_links">
-            <a href="#"></a>
+        <div class="best_of">
+            <div class="best_of_title">
+                <p>محبوب‌ترین‌های فیلیمو</p>
+                <div class="best_of_switch">
+                    <input type="button" value="سریال" class="serial_btn" 
+                    id="serial_btn" onclick="serial_btn()">
+                    <input type="button" value="فیلم" class="movie_btn" 
+                    id="movie_btn" onclick="movie_btn()">
+                </div>
+                <div class="series_filmbox"></div>
+                <div class="movie_filmbox"></div>
+            </div>
         </div>
-    </footer>
-</body>
-
+        
+        <footer>
+            <div class="footer_socials">
+                <a href="#"> شبکه‌های اجتماعی </a>
+            </div>
+            
+            <div class="footer_links">
+                <a href="#"></a>
+            </div>
+        </footer>
+        
+        <script src="homepage_app.js"></script>
+    </body>
 </html>

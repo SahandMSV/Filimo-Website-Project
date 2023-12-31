@@ -1,2 +1,2 @@
 # Filimo-Website-Project
-just a template
+just a template for the site filimo.com

@@ -46,6 +46,18 @@
     font-style: normal;
 }
 
+@font-face { /* IRANSans Web Black */
+    font-family: "iranSans-black";
+    src: url("media/fonts/IRANSansXV.ttf"); /* The variable font */
+    src: url("media/fonts/IRANSansWeb_Black.eot") format("embedded-opentype"),
+        url("media/fonts/IRANSansX-Black.woff2") format("woff2"),
+        url("media/fonts/IRANSansX-Black.woff") format("woff"),
+        url("media/fonts/IRANSansX-Black.ttf") format("truetype"),
+        url("media/fonts/IRANSansX-Black.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* The Meyer Reset (Deletted) */
 
 :root {
@@ -77,14 +89,48 @@ a {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 100px;
+    width: 100%;
 
-    background-color: rgba(0, 0, 0, 1);
+    background-color: black;
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1240px;
+}
+
+@media only screen and (min-width: 0) {
+    .nav_container {
+        padding: 0 20px;
+    }
+
+    .best_of {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .nav_container {
+        padding: 0 100px;
+    }
+
+    .best_of {
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .nav_container {
+        margin: 0 calc(100% - 1440px);
+    }
 }
 
 .filimo_logo {
@@ -206,7 +252,7 @@ nav {
 
 .intro_photo > img {
     position: absolute;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     min-width: 912px;
     width: 100%;
     transform: translateY(-5px);
@@ -232,22 +278,22 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    font-family: "iranSans", Arial, Helvetica, sans-serif;
     transform: translateY(-60px);
 }
 
 .intro_details p:first-child {
     color: rgb(248, 159, 62);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-family: "iranSans-regular", Arial, Helvetica, sans-serif;
     font-weight: bolder;
     margin-bottom: 5px;
 }
 
 .intro_details > p:nth-child(2) {
     color: rgb(255, 255, 255);
+    font-family: "iranSans-black", Arial, Helvetica, sans-serif;
     font-size: 2.2rem;
-    font-weight: bolder;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     direction: rtl;
 }
 
@@ -256,7 +302,9 @@ nav {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
-    margin-bottom: 65px;
+    gap: 2%;
+    margin-bottom: 56px;
+
     color: rgba(255, 255, 255, 0.75);
     font-size: 0.87rem;
     direction: rtl;
@@ -274,6 +322,9 @@ nav {
 
 .intro_details a {
     background-color: rgb(28, 181, 97);
+    font-family: "iranSans-regular", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
     padding: 16px 65px;
     border-radius: 9px;
     transition: background-color 0.3s;
@@ -297,20 +348,79 @@ nav {
     fill: rgb(223, 144, 26);
 }
 
+/* Best of */
+
+.best_of {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--accent-color);
+}
+
+.best_of_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    direction: rtl;
+
+    margin-bottom: 400px;
+}
+
+.best_of_title p {
+    margin-left: 16px;
+    font-family: "iranSans-bold", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.best_of_switch {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border: 1px solid rgb(58, 58, 58);
+    border-radius: 50px;
+}
+
+.serial_btn {
+    background-color: rgb(58, 58, 58);
+    font-weight: bolder;
+}
+
+.movie_btn {
+    background-color: var(--accent-color);
+}
+
+.best_of_switch > input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 55px;
+    height: 24px;
+    cursor: pointer;
+    
+    font-size: 0.8rem;
+    
+    border-radius: 50px;
+    color: white;
+}
+
 /* Footer */
 
 footer {
     position: fixed;
     bottom: 0px;
-
+    
     padding: 0 8px;
     width: 100%;
     height: 28px;
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     background-color: rgb(25, 25, 25);
 }
 
