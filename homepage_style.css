@@ -107,32 +107,6 @@ nav {
     max-width: 1240px;
 }
 
-@media only screen and (min-width: 0) {
-    .nav_container {
-        padding: 0 20px;
-    }
-
-    .best_of {
-        padding: 0 20px;
-    }
-}
-
-@media only screen and (min-width: 1100px) {
-    .nav_container {
-        padding: 0 100px;
-    }
-
-    .best_of {
-        padding: 0 100px;
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    .nav_container {
-        margin: 0 calc(100% - 1440px);
-    }
-}
-
 .filimo_logo {
     width: 113px;
     padding-left: 32px;
@@ -356,7 +330,7 @@ nav {
     justify-content: center;
     align-items: center;
     
-    background-color: var(--accent-color);
+    background-color: rgb(21, 21, 21);
 }
 
 .best_of_title {
@@ -385,11 +359,12 @@ nav {
 
 .serial_btn {
     background-color: rgb(58, 58, 58);
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .movie_btn {
-    background-color: var(--accent-color);
+    background-color: rgb(21, 21, 21);
+    font-weight: normal;
 }
 
 .best_of_switch > input {
@@ -431,4 +406,24 @@ footer > div > a {
 
 .footer_socials {
     height: 100%;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 0) {
+    .nav_container, .best_of {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .nav_container, .best_of {
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .nav_container {
+        margin: 0 calc(100% - 1440px);
+    }
 }
