@@ -20,7 +20,7 @@ const navbar = document.getElementById("navbar");
 
 window.addEventListener ('scroll', function () {
     if (window.scrollY > 0) {
-        document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.65)";
+        document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
     } else {
         document.getElementById("navbar").style.backgroundColor = "black";
     }

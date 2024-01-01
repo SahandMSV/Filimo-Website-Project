@@ -95,9 +95,10 @@ nav {
     height: 52px;
 
     background-color: black;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(18px);
     position: sticky;
     top: 0;
+    z-index: 5;
 }
 
 .nav_container {
@@ -327,11 +328,19 @@ nav {
 
 .best_of {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    background-color: rgb(21, 21, 21);
+}
+
+.best_of_container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    background-color: rgb(21, 21, 21);
+    width: 100%;
 }
 
 .best_of_title {
@@ -400,9 +409,20 @@ footer {
     background-color: rgb(25, 25, 25);
 }
 
-footer > div > a {
+.footer_socials > a {
     color: rgba(255, 255, 255, 0.4);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    transition: color 0.4s;
+}
+
+.footer_links > a {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    margin-left: 11px;
+    transition: color 0.4s;
+}
+.footer_links > a:hover, .footer_socials > a:hover {
+    color: rgba(255, 255, 255, 1);
 }
 
 .footer_socials {
@@ -412,19 +432,25 @@ footer > div > a {
 /* Media queries */
 
 @media only screen and (min-width: 0) {
-    .nav_container, .best_of {
+    .nav_container, .best_of_container {
         padding: 0 20px;
     }
 }
 
 @media only screen and (min-width: 1100px) {
-    .nav_container, .best_of {
+    .nav_container, .best_of_container {
         padding: 0 100px;
     }
 }
 
 @media only screen and (min-width: 1440px) {
-    .nav_container {
+    .nav_container{
+        max-width: 1414px;
+        margin: 0 auto;
+    }
+    
+
+    .best_of_container {
         max-width: 1414px;
         margin: 0 auto;
     }
