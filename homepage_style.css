@@ -62,6 +62,7 @@
 
 :root {
     --accent-color: rgb(21, 21, 21);
+    --secondary-color: rgb(253, 193, 59);
 }
 
 * {
@@ -109,17 +110,10 @@ nav {
     height: 100%;
 }
 
-.filimo_logo {
-    width: 113px;
-    padding-left: 32px;
-    border-left: 1px solid rgb(80, 80, 80);
-    margin-left: 38px;
-}
-
 .nav_links {
     display: flex;
     align-items: center;
-    height: 52px;
+    height: 100%;
 }
 
 .nav_links > div {
@@ -127,53 +121,66 @@ nav {
     font-size: 0.7rem;
 }
 
-.filimotor_container, .filimomadrese_container, .search_container {
+.filimo_logo {
+    width: 113px;
+    padding-left: 32px;
+    border-left: 1px solid rgb(80, 80, 80);
+    margin-left: 32px;
+}
+
+
+.filimotor_container,
+.filimomadrese_container,
+.search_container {
     width: 100%;
-    height: 100%;
+    height: 52px;
+    /* padding: 0 5px; */
+    margin-left: 14px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-size: 0.78rem;
 }
 
-.filimotor_container:hover p,
-.filimomadrese_container:hover p,
-.search_container:hover p {
-    transition: fill 0.5s;
-}
-/*
-.filimotor_container img {
-    margin-left: 3px;
-    width: 13px;
-}
-
-.filimotor_container:hover a {
-    color: rgb(253, 193, 59);
-}
-
-.filimomadrese_container img {
-    margin-left: 5px;
-    width: 17px;
-}
-
-.filimomadrese_container:hover a {
-    color: rgb(253, 193, 59);
-} */
-
-.search_container:hover p {
+.filimotor_container p,
+.filimomadrese_container p,
+.search_container p {
     transition: color 0.5s;
 }
 
-#search_icon { /* SVG */
-    width: 100%;
-    height: 100%;
-    fill: rgb(253, 193, 59);
+.filimotor_container:hover > p,
+.filimomadrese_container:hover > p,
+.search_container:hover > p {
+    color: var(--secondary-color);
 }
 
-#filimomadrese_icon {
-    width: 100%;
-    height: 100%;
-    fill: rgb(253, 193, 59);
+.filimotor_icon {
+    width: 15px;
+    margin: 0 10px 0 5px;
+    padding-bottom: 3px;
+}
+
+.filimomadrese_icon {
+    width: 17px;
+    margin: 0 20px 0 8px;
+}
+
+#filimomadrese_icon,
+#search_icon {
+    transition: fill 0.5s;
+}
+
+.filimomadrese_container:hover svg #filimomadrese_icon,
+.search_container:hover svg #search_icon {
+    fill: var(--secondary-color);
+}
+
+.search_icon {
+    fill: white;
+    width: 16px;
+    margin: 0 12px 0 4px;
 }
 
 .nav_signup {
@@ -219,9 +226,10 @@ nav {
     background-color: rgb(24, 153, 82);
 }
 
-.purchase img {
+.purchase svg {
+    width: 16px;
+    height: 16px;
     margin-left: 5px;
-    width: 18px;
 }
 
 /* Intro */
@@ -297,12 +305,18 @@ nav {
 }
 
 .intro_details a {
-    background-color: rgb(28, 181, 97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     font-family: "iranSans-regular", Arial, Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
-    padding: 16px 65px;
+    font-size: 1rem;
+    padding: 18px  60px;
+    
+    background-color: rgb(28, 181, 97);
     border-radius: 9px;
+    
     transition: background-color 0.3s;
 }
 
@@ -310,18 +324,29 @@ nav {
     background-color: rgb(24, 153, 82);
 }
 
+.intro_details svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+}
+
 .intro_items_last_item {
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     color: rgb(170, 170, 170);
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     margin-top: 9px;
 }
 
-.intro_items_last_item img {
-    margin-left: 5px;
-    width: 15px;
-    fill: rgb(223, 144, 26);
+.intro_items_last_item svg {
+    width: 14px;
+    margin-left: 8px;
+}
+
+#giftcard_icon {
+    fill: rgb(170, 170, 170);
 }
 
 /* Best of */
@@ -386,6 +411,7 @@ nav {
     height: 24px;
     cursor: pointer;
     
+
     font-size: 0.8rem;
     
     border-radius: 50px;
@@ -398,7 +424,6 @@ footer {
     position: fixed;
     bottom: 0px;
     
-    padding: 0 8px;
     width: 100%;
     height: 28px;
     
@@ -410,15 +435,39 @@ footer {
 }
 
 .footer_socials > a {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 0.75rem;
-    transition: color 0.4s;
+    transition: color 0.4s; 
+}
+
+.footer_socials > a > div {
+    height: 100%;
+    
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_socials_dropdown {
+    width: 10px;
+    height: 100%;
+    margin: 0 8px 0 5px;
+}
+
+#dropdown {
+    fill: rgba(255, 255, 255, 0.5);
+    transition: fill 0.4s; 
+}
+
+div:hover svg #dropdown {
+    fill: rgba(255, 255, 255, 1);
 }
 
 .footer_links > a {
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.75rem;
-    margin-left: 11px;
+    padding: 0 5px;
     transition: color 0.4s;
 }
 .footer_links > a:hover, .footer_socials > a:hover {
